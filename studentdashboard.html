@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="./source/output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 h-300 bg-blue-700 text-white p-5 hidden md:block">
+            <h1 class="text-xl font-bold ">Student Dashboard</h1>
+            <nav class="flex flex-col mt-10">
+                <ul>
+                    <li class="py-2"><a href="#" class="hover:text-gray-300 hover:bg-blue-500 border-b-2 pr-40 pb-3">Progress</a></li>
+                    <li class="py-2"><a href="#" class="hover:text-gray-300  hover:bg-blue-500 border-b-2 pr-32 pb-3">Assignments</a></li>
+                    <li class="py-2"><a href="#" class="hover:text-gray-300  hover:bg-blue-500 border-b-2  pr-40 pb-3">Calendar</a></li>
+                    <li class="py-2"><a href="#" class="hover:text-gray-300  hover:bg-blue-500 border-b-2  pr-40 pb-3">Reports</a></li>
+                    <li class="py-2"><a href="#" class="hover:text-gray-300  hover:bg-blue-500 border-b-2  pr-40 pb-3">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Top Navbar -->
+            <header class="bg-white shadow p-4 flex justify-between items-center">
+                <div class="flex flex-row gap-200 ">
+                <h2 class="text-xl font-semibold  text-blue-700">Student Dashboard</h2>
+                <!-- <i class="fa-solid fa-user  text-blue-700 text-xl bg-gray-100 border-0 rounded-full p-3"></i> -->
+                <i class="fa-solid fa-circle-user text-blue-700 text-4xl"></i>
+            </div>
+                <button class="md:hidden text-blue-700">Menu</button>
+            </header>
+
+            <!-- Content Area -->
+            <main class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-2 shadow rounded-lg border-b-blue-700 border-b-3">
+                    <h3 class="text-lg font-semibold">Completed Courses </h3>
+
+                    <div class="flex flex-row gap-40">
+                    <p class="text-gray-500 text-3xl">5 </p>
+                    <i class="fa-regular fa-thumbs-up text-3xl  text-blue-700"></i>
+                </div>
+                </div>
+                <div class="bg-white p-2 shadow rounded-lg  border-b-blue-700 border-b-3">
+                    <h3 class="text-lg font-semibold">Pending Assignments </h3>
+
+                    <div class="flex flex-row gap-44">
+                    <p class="text-gray-500 text-3xl"> 3 </p>
+                    <i class="fa-solid fa-clock-rotate-left text-3xl  text-blue-700"></i>
+                </div>
+                </div>
+                <!-- <div class="bg-white p-4 shadow rounded-lg">
+                    <h3 class="text-lg font-semibold">Pending Assignments</h3>
+                    <div class="flex flex-row gap-44">
+                        <p class="text-gray-500 text-3xl"> 3 </p>
+                        <i class="fa-solid fa-clock-rotate-left text-3xl  text-blue-700"></i>
+                        
+                    </div>
+                </div> -->
+                <div class="bg-white p-2 shadow rounded-lg  border-b-blue-700 border-b-3">
+                    <h3 class="text-lg font-semibold">Upcoming Exams</h3>
+
+                    <div class="flex flex-row gap-40">
+                    <p class="text-gray-500 text-3xl"> 2 </p>
+                    <i class="fa-regular fa-calendar-days text-3xl  text-blue-700"></i>
+                </div>
+                </div>
+                <div class="bg-white p-2 shadow rounded-lg  border-b-blue-700 border-b-3">
+                    <h3 class="text-lg font-semibold">Overall Progress</h3>
+
+                    <div class="flex flex-row gap-32">
+                    <p class="text-gray-500 text-3xl"> 85% </p>
+                    <i class="fa-solid fa-chart-simple text-3xl  text-blue-700 "></i>
+                </div>
+                </div>
+                
+            </main>
+
+            <!-- Student Calendar Section -->
+            <section class="p-6">
+                <h3 class="text-lg font-semibold mb-4">Activity Calendar <i class="fa-regular fa-calendar-days"></i></h3>
+                <div class="bg-white p-4 shadow rounded-lg">
+                    <table class="w-full text-center border-1">
+                        <thead>
+                            <tr class="bg-blue-700 text-white border border-gray-300">
+                                <th class="p-2 border border-gray-300">Sun</th>
+                                <th class="p-2 border border-gray-300">Mon</th>
+                                <th class="p-2 border border-gray-300">Tue</th>
+                                <th class="p-2 border border-gray-300">Wed</th>
+                                <th class="p-2 border border-gray-300">Thu</th>
+                                <th class="p-2 border border-gray-300">Fri</th>
+                                <th class="p-2 border border-gray-300">Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-2 border border-gray-300"></td>
+                                <td class="p-2 border border-gray-300">1</td>
+                                <td class="p-2 border border-gray-300">2</td>
+                                <td class="p-2 border border-gray-300">3</td>
+                                <td class="p-2 border border-gray-300">4</td>
+                                <td class="p-2 bg-green-200 border border-gray-300">5 <br> Assignment  <br> Due</td>
+                                <td class="p-2 border border-gray-300">6</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 border border-gray-300">7</td>
+                                <td class="p-2 border border-gray-300">8</td>
+                                <td class="p-2 bg-yellow-200 border border-gray-300">9 <br> Group <br> Study</td>
+                                <td class="p-2 border border-gray-300">10</td>
+                                <td class="p-2 border border-gray-300">11</td>
+                                <td class="p-2 border border-gray-300">12</td>
+                                <td class="p-2 border border-gray-300">13</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 border border-gray-300">14</td>
+                                <td class="p-2 border border-gray-300">15</td>
+                                <td class="p-2 border border-gray-300">16</td>
+                                <td class="p-2 bg-blue-200 border border-gray-300">17 <br> Exam <br> Preparation</td>
+                                <td class="p-2 border border-gray-300">18</td>
+                                <td class="p-2 border border-gray-300">19</td>
+                                <td class="p-2 border border-gray-300">20</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 border border-gray-300">21</td>
+                                <td class="p-2 border border-gray-300">22</td>
+                                <td class="p-2 border border-gray-300">23</td>
+                                <td class="p-2 border border-gray-300">24</td>
+                                <td class="p-2 bg-red-200 border border-gray-300">25 <br> Final <br> Exam</td>
+                                <td class="p-2 border border-gray-300">26</td>
+                                <td class="p-2 border border-gray-300">27</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 border border-gray-300">28</td>
+                                <td class="p-2 border border-gray-300">29</td>
+                                <td class="p-2 border border-gray-300">30</td>
+                                <td class="p-2 border border-gray-300">31</td>
+                                <td class="p-2 border border-gray-300"></td>
+                                <td class="p-2 border border-gray-300"></td>
+                                <td class="p-2 border border-gray-300"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
